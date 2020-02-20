@@ -1,12 +1,27 @@
 
 exports.min = function min (array) {
-  return 0;
+    //console.log("KUKU " + ); 
+    if(!Array.isArray(array)   || !isNaN(array)) return 0;
+   
+    return  Math.min(...array);
+  
 }
 
 exports.max = function max (array) {
-  return 0;
+    if(!Array.isArray(array)   || !isNaN(array)) return 0;
+
+  return  Math.max(...array);
 }
 
 exports.avg = function avg (array) {
-  return 0;
+    if(!Array.isArray(array)   || !isNaN(array)) return 0;
+    let sum = 0;
+    for(let i of array){
+        sum += i;
+    }
+
+    return sum / array.length;
 }
+
+
+
